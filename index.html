@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="start-up" id="start-screen">
+      <div class="logo-container">
+        <div class="logo"></div>
+      </div>
+
+      <button id="start">Start</button>
+      <p>© Autobody IQ 2022 | All Rights Reserved</p>
+    </div>
+    <div class="background"></div>
+    <!-- SETTINGS-SECTON  -->
+    <div class="settings"><i class="fa-solid fa-gear" id="settings"></i></div>
+    <!-- OPTIONS-SECTON  -->
+    <div class="options" id="options">
+      <ul>
+        <li class="list">
+          <h1>Profile Setup</h1>
+          <h2>Choose color theme</h2>
+          <div class="group">
+            <div class="color" id="light"><p>Light</p></div>
+            <div class="color" id="sunset"><p>Sunset</p></div>
+            <div class="color" id="dark"><p>Dark</p></div>
+          </div>
+        </li>
+        <li class="list">
+          <!-- <h1>Avaitor</h1> -->
+          <h2>Choose your avatar</h2>
+          <div class="group">
+            <div
+              class="avatar"
+              id="skull"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1616346704478-4b3a16f6fb19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvZHklMjBidWlsZGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60');
+              "
+            >
+              <p class="avatar-title">skull</p>
+            </div>
+            <div
+              class="avatar"
+              id="robot"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1589254066213-a0c9dc853511?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cm9ib3R8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60');
+              "
+            >
+              <p class="avatar-title">robot</p>
+            </div>
+            <div
+              class="avatar"
+              id="dog"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1587790311640-50b019663f01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHBpdGJ1bGx8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
+              "
+            >
+              <p class="avatar-title">dog</p>
+            </div>
+            <div
+              class="avatar"
+              id="wheels"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1588613829042-211d280bc1cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJpbXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
+              "
+            >
+              <p class="avatar-title">wheels</p>
+            </div>
+            <div
+              class="avatar"
+              id="car"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1584343292021-f2d13cb7711a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hldmVsbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
+              "
+            >
+              <p class="avatar-title">car</p>
+            </div>
+            <div
+              class="avatar"
+              id="truck"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1579097647275-16b002cced9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8amVlcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60');
+              "
+            >
+              <p class="avatar-title">truck</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <form action="" id="form">
+        <label for="user"></label>
+        <input
+          type="text"
+          onfocus="this.value=''"
+          id="user-name"
+          placeholder="Enter Name"
+          class="user"
+          autocapitalize="true"
+          autocomplete="false"
+        />
+        <button type="submit" id="change">Create Profile</button>
+      </form>
+    </div>
+
+    <div class="banner">
+      <!-- LOGO-SECTON  -->
+      <div class="logo" id="logo"></div>
+      <!-- NAV-SECTON  -->
+      <div class="name" id="user"></div>
+    </div>
+
+    <nav>
+      <h1>
+        level
+        <div class="lvl" id="level">0</div>
+      </h1>
+      <div class="profile" id="profile">
+        <!-- <i class="fa-solid fa-user"></i> -->
+      </div>
+    </nav>
+
+    <!-- QUIZ-SECTON  -->
+
+    <div class="pages">
+      <!-- Intro Page -->
+      <div class="intro-container">
+        <h2 class="title">Auto Body IQ Test</h2>
+        <button id="study">Study <i class="fa-solid fa-book"></i></button>
+        <h2 class="subtitle">Choose Level</h2>
+        <div class="level">
+          <button class="test" id="novice">
+            Novice <i class="fa-solid fa-feather-pointed"></i>
+          </button>
+
+          <button class="test" id="easy">
+            Easy <i class="fa-solid fa-hammer"></i>
+          </button>
+
+          <button class="test" id="hard">
+            Hard <i class="fa-solid fa-helmet-safety"></i>
+          </button>
+
+          <button class="test" id="veteran">
+            Veteran <i class="fa-solid fa-medal"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Study Page -->
+
+      <div class="study-container">
+        <div class="study-header-one">
+          <i class="fa-solid fa-rotate-left" id="go-back"></i>
+          <h2 class="study-title">Sanding Metal</h2>
+          <p class="one">
+            It is recommended to use a 320 or higher grit count to sand metal.
+            If you need to polish metal, it is best to use a much finer
+            sandpaper grit. If you need to paint over metal, it must be
+            chemically etched first and/or topcoated with epoxy.
+          </p>
+        </div>
+        <div class="study-header-two">
+          <h2 class="study-title">Sanding Basecoat</h2>
+          <p class="two">
+            It is recommanded to sand basecoat with 320 grit count or higher for
+            best adhesion. Grits higher than 1500 may be too fine outside of
+            blending or applying light coat applications. Grits lower than 600
+            can be dificult to hide scratches in metalic colors
+          </p>
+        </div>
+        <div class="study-header-three">
+          <h2 class="study-title">Sanding Topcoat</h2>
+          <p class="three">
+            It is recommanded to sand Topcoats with a 1500 or higher grit count
+            for best results. Lower grits like 800 can be used to cut texture,
+            trash and orange-peel faster, but must be followed by finer grits to
+            create a smoother finish. For best results start with a coarse
+            grit(800-1000) and gradually work upwards in small
+            increments(200-500) to a dull semi-gloss (1500-2500) sanded surface.
+            A scratch free mirror-like finish can then be achevied by buffing
+            and polishing
+          </p>
+        </div>
+        <button id="load">Load Test</button>
+      </div>
+
+      <!-- Test Page -->
+
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-nav">
+          <div class="progress">
+            <div class="bar" id="progress-bar"></div>
+          </div>
+          <i class="fa-solid fa-house" id="home-btn"></i>
+          <i class="fa-solid fa-rotate-left" id="restart"></i>
+        </div>
+        <div class="quiz-header">
+          <h2 class="question" id="question">Question text</h2>
+          <ul>
+            <li class="question-text">
+              <input type="radio" name="answer" class="answer" id="a" />
+              <label for="a" id="a_text">Question</label>
+            </li>
+
+            <li class="question-text">
+              <input type="radio" name="answer" class="answer" id="b" />
+              <label for="b" id="b_text">Question</label>
+            </li>
+
+            <li class="question-text">
+              <input type="radio" name="answer" class="answer" id="c" />
+              <label for="c" id="c_text">Question</label>
+            </li>
+
+            <li class="question-text">
+              <input type="radio" name="answer" class="answer" id="d" />
+              <label for="d" id="d_text">Question</label>
+            </li>
+          </ul>
+        </div>
+        <button id="submit">Submit</button>
+      </div>
+
+      <!-- Success Message -->
+
+      <div class="success-container">
+        <h2>
+          You answered <span class="correct-score"></span>/<span
+            class="total-answer"
+          ></span>
+          correct
+        </h2>
+        <div class="trophy"><img src="/images/trophy.png" alt="" /></div>
+        <h3 id="success-msg">
+          You're ready for the next challange in
+          <span class="count-down"></span>
+        </h3>
+        <button id="success" onclick="showIntro()">Home</button>
+        <button id="next">Next</button>
+      </div>
+    </div>
+    <div class="confetti-container">
+      <img
+        src="https://media.giphy.com/media/fW4qzqnk9WluHMbAtZ/giphy.gif"
+        alt=""
+      />
+    </div>
+
+    <!-- Retry Message -->
+
+    <div class="results-container">
+      <h2>
+        You answered <span id="testScore"> </span>/<span id="testLength"> </span
+        >correct
+      </h2>
+      <h3 style="text-align: center">Let's hit the books again</h3>
+      <button id="failed">Home</button>
+    </div>
+    <!-- QUIZ-SECTON  -->
+
+    <footer>
+      <ul></ul>
+      <p class="rights">© Autobody IQ 2022 | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
